@@ -26,20 +26,10 @@ public class AtmTest {
                 AtmServices services = new AtmServices();
                 services.services();
             }
-        }catch (EmptyUsernameException e) {
-            System.out.println("Caught EmptyUsernameException: " + e.getMessage());
-        }catch (EmptyPasswordException e) {
-            System.out.println("Caught EmptyPasswordException: " + e.getMessage());
-        }catch (InvalidUsernameException e){
-            System.out.println("Caught InvalidUsernameException: " + e.getMessage());
-        }catch (InvalidPasswordException e){
-            System.out.println("Caught InvalidPasswordException: " + e.getMessage());
-        }catch (InSufficientBalanceException e){
-            System.out.println("Caught InSufficientBalanceException: " + e.getMessage());
-        }catch (InvalidAmountException e){
-            System.out.println("Caught InvalidAmountException: " + e.getMessage());
-        }catch (InvalidAtmServiceException e){
-            System.out.println("Caught InvalidAtmServiceException: " + e.getMessage());
+        }catch (RuntimeException e) {
+            System.out.println("Caught UncheckedException: " + e.getMessage());
+        }catch(Exception e) {
+            System.out.println("Caught CheckedException: " + e.getMessage());
         }finally{
             System.out.println("Thank you for using our ATM Services!");
         }
