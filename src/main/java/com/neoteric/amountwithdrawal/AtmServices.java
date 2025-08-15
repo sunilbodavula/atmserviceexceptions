@@ -23,5 +23,6 @@ public class AtmServices {
         }else {
             throw new InvalidAtmServiceException("Invalid ATM service: Enter 'Display' or 'Withdraw'");
         }
+        input.close();
     }
 }

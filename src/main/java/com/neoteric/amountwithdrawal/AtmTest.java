@@ -40,7 +40,9 @@ public class AtmTest {
             System.out.println("Caught InvalidAmountException: " + e.getMessage());
         }catch (InvalidAtmServiceException e){
             System.out.println("Caught InvalidAtmServiceException: " + e.getMessage());
+        }finally{
+            System.out.println("Thank you for using our ATM Services!");
         }
-
+        input.close();
     }
 }
